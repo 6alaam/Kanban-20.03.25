@@ -9,6 +9,8 @@ public class Main {
 
         taskManger.addTask(task);
         System.out.println(task);
+        // здесь так же непонятный момент, мы не присваеваем обьекту имя. и получается задача
+        // сразу создается внутри хешмапы
         taskManger.addTask(new Task("test2","tester2"));
         taskManger.addTask(new Task("test3","tester3"));
         System.out.println();
