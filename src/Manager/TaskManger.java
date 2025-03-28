@@ -227,6 +227,28 @@ public class TaskManger {
             System.out.println("ID: " + key + ", " + task);
         }
     }
+
+
+    // метод для печати эпиков с принадлежащим им сабтаскам
+        public void printEpicWithSubtasks(int epicId) {
+        Epic epic = getEpicById(epicId);
+        if (epic == null) {
+            System.out.println("Эпик с ID " + epicId + " не найден.");
+            return;
+        }
+        System.out.println("Эпик: " + epic);
+        List<Subtask> subtaskList = epic.getSubtaskList();
+        if (subtaskList.isEmpty()) {
+            System.out.println("У этого эпика нет сабтасков.");
+        } else {
+            System.out.println("Сабтаски:");
+            for (Subtask subtask : subtaskList) {
+                System.out.println(" - " + subtask);
+            }
+        }
+    }
+
+
 }
 
 
