@@ -22,10 +22,14 @@ public class Main {
         taskManger.printTasks();
         task1.setDescription("обновлено"); // так мы делаем когда имя обьекта понятно
         taskManger.updateTask(task1);   // ну и обновили в хешмапе
-        taskManger.getTaskById(2).setDescription("ОХЕРЕТЬ");  // а вот тут мы берем метод получения задачи по айди, и через точку вызываем следующий метод
+        // а вот тут мы берем метод получения задачи по айди, и через точку вызываем следующий метод
         // если по подробнее то тут написано у обьекта который ты получишь по айди (2) поменяй описание на охереть
-        taskManger.updateTask(taskManger.getTaskById(2));  // тут порядок немного другой , но смысл тот же
+        taskManger.getTaskById(2).setDescription("ОХЕРЕТЬ");
+
+
+        // тут порядок немного другой , но смысл тот же
         //  в хешмапе тасков измени (впиши изменнную) под вторым айдишником
+        taskManger.updateTask(taskManger.getTaskById(2));
         taskManger.printTasks();
 
         System.out.println();
@@ -64,7 +68,7 @@ public class Main {
         taskManger.printEpicWithSubtasks(8);
         System.out.println();
 
-       // taskManger.updateSubtask(taskManger.getSubtaskById(11).setDescription("офигенно"));
+       //taskManger.updateSubtask(taskManger.getSubtaskById(11).setDescription("офигенно"));
         // этод метод не работает потому что сет дискрипшен ничего не возвращает,
         taskManger.printEpicWithSubtasks(8);
     }
